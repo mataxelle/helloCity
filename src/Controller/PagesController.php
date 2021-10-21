@@ -17,10 +17,10 @@ class PagesController extends AbstractController
     }
 
     /**
-     * @Route("/", name="about")
+     * @Route("/about", name="about")
      */
     public function about(): Response
     {
-        return $this->render('pages/avout.html.twig');
+        return $this->render('pages/about.html.twig');
     }
 }

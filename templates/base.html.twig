@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Hello City{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+        
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="flex flex-col justify-between items-center min-h-screen">
+        <main class="my-6">
+            {% block body %}{% endblock %}
+        </main>  
+
+        <footer class="my-6">
+            <p class="text-gray-400">
+                &copy; Copyright {{ 'now'|date('Y') }}
+                &middot; <a href="{{ path('about') }}" class="text-indigo-500 hover:text-indigo-600">Notre mission</a>
+            </p>
+        </footer>
+
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -5,12 +5,32 @@
 {% block body %}
     <h1>HelloCity</h1>
 
-    <p>Il est exactement {{ 'now'|date('h:i A') }}</p>
-
-    <footer>
-        <p>
-            &copy; Copyright {{ 'now'|date('Y') }}
-            &middot; <a href="#">Notre mission</a>
-        </p>
-    </footer>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+            <img src="" alt="Flag">
+            <h2>France</h2>
+            <p>Il est exactement {{ 'now'|date('h:i A') }} en France</p>
+        </div>
+        <div>
+            <img src="" alt="Flag">
+            <h3>France</h3>
+            <p>Il est exactement {{ 'now'|date('h:i A') }} en Amérique</p>
+        </div>
+        <div>
+            <img src="" alt="Flag">
+            <p>Il est exactement {{ 'now'|date('h:i A') }} en Inde</p>
+        </div>
+        <div>
+            <img src="" alt="Flag">
+            <p>Il est exactement {{ 'now'|date('h:i A') }} au Japon</p>
+        </div>
+        <div>
+            <img src="" alt="Flag">
+            <p>Il est exactement {{ 'now'|date('h:i A') }} en Australie</p>
+        </div>
+        <div>
+            <img src="" alt="Flag">
+            <p>Il est exactement {{ 'now'|date('h:i A') }} au Brésil</p>
+        </div>
+    </div>
 {% endblock %}
