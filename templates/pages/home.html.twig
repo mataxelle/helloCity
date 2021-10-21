@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil | {{ parent() }} {% endblock %}
+
+{% block body %}
+    <h1>HelloCity</h1>
+
+    <p>Il est exactement {{ 'now'|date('h:i A') }}</p>
+
+    <footer>
+        <p>
+            &copy; Copyright {{ 'now'|date('Y') }}
+            &middot; <a href="#">Notre mission</a>
+        </p>
+    </footer>
+{% endblock %}
