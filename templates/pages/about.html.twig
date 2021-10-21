@@ -3,9 +3,9 @@
 {% block title %}Notre mission | {{ parent() }} {% endblock %}
 
 {% block body %}
-    <h1>Notre mission</h1>
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl text-purple-600">Notre mission</h1>
 
-    <div>
+    <div class="grid grid-rows-2 gap-y-10 my-14 mx-6 md:mx-24 xl:mx-60 ">
         <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -14,9 +14,18 @@
         Excepteur sint occaecat cupidatat non proident,
         sunt in culpa qui officia deserunt mollit anim id est laborum."
         </p>
+        <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+        
     </div>
 
     <p>
-        <a href="{{ path('home') }}">Revenir à la page d'accueil</a>
+        <a href="{{ path('home') }}" class="text-indigo-500 hover:text-indigo-700 underline">Revenir à la page d'accueil</a>
     </p>
 {% endblock %}

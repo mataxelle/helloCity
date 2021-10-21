@@ -10,14 +10,14 @@
         {% endblock %}
     </head>
     <body class="flex flex-col justify-between items-center min-h-screen">
-        <main class="my-6">
+        <main role="main" class="my-6 flex flex-col items-center justify-center">
             {% block body %}{% endblock %}
         </main>  
 
         <footer class="my-6">
             <p class="text-gray-400">
                 &copy; Copyright {{ 'now'|date('Y') }}
-                &middot; <a href="{{ path('about') }}" class="text-indigo-500 hover:text-indigo-600">Notre mission</a>
+                &middot; <a href="{{ path('about') }}" class="text-indigo-500 hover:text-indigo-700">Notre mission</a>
             </p>
         </footer>
 

@@ -3,34 +3,38 @@
 {% block title %}Accueil | {{ parent() }} {% endblock %}
 
 {% block body %}
-    <h1>HelloCity</h1>
+    <h1 class="text-5xl sm:text-7xl lg:text-8xl text-purple-600">HelloCity</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div>
-            <img src="" alt="Flag">
-            <h2>France</h2>
-            <p>Il est exactement {{ 'now'|date('h:i A') }} en France</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-60 gap-y-32 mt-24">
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/australia-flag.png') }}" alt="Australia Flag">
+            <h2 class="text-3xl mt-5">Sydney</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'Australia/Sydney') }}</p>
         </div>
-        <div>
-            <img src="" alt="Flag">
-            <h3>France</h3>
-            <p>Il est exactement {{ 'now'|date('h:i A') }} en Amérique</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/japan-flag.png') }}" alt="Japan Flag">
+            <h2 class="text-3xl mt-5">Tokyo</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'Asia/Tokyo') }}</p>
         </div>
-        <div>
-            <img src="" alt="Flag">
-            <p>Il est exactement {{ 'now'|date('h:i A') }} en Inde</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/india-flag.png') }}" alt="India Flag">
+            <h2 class="text-3xl mt-5">Dheli</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'Asia/Kolkata') }}</p>
         </div>
-        <div>
-            <img src="" alt="Flag">
-            <p>Il est exactement {{ 'now'|date('h:i A') }} au Japon</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/france-flag.png') }}" alt="France Flag">
+            <h2 class="text-3xl mt-5">Paris</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'Europe/Paris') }}</p>
         </div>
-        <div>
-            <img src="" alt="Flag">
-            <p>Il est exactement {{ 'now'|date('h:i A') }} en Australie</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/united-states-of-america-flag.png') }}" alt="America Flag">
+            <h2 class="text-3xl mt-5">New York</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'America/New_York') }}</p>
         </div>
-        <div>
-            <img src="" alt="Flag">
-            <p>Il est exactement {{ 'now'|date('h:i A') }} au Brésil</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="{{ asset('images/mexico-flag.png') }}" alt="Mexico Flag">
+            <h2 class="text-3xl mt-5">Mexico</h2>
+            <p class="text-lg">Il est acteullement {{ 'now'|date('H:i:s', 'America/Mexico_City') }}</p>
         </div>
     </div>
 {% endblock %}
